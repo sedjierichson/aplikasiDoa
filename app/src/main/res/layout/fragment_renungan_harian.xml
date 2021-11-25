@@ -11,6 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="56dp">
+
+        <ImageView
+            android:id="@+id/gambarRenungan"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"/>
+
         <TextView
             android:id="@+id/tvJudulRenungan"
             android:layout_width="wrap_content"
@@ -21,7 +31,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/gambarRenungan" />
 
         <TextView
             android:id="@+id/tvTanggal"
@@ -31,6 +41,17 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/tvJudulRenungan"
             app:layout_constraintTop_toBottomOf="@+id/tvJudulRenungan" />
+
+        <ImageView
+            android:id="@+id/pickDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/calendar"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/tvJudulRenungan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvJudulRenungan" />
 
         <TextView
             android:id="@+id/tvIsiRenungan"
