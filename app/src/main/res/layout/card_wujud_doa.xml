@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Pengirim = "
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvNamaPengirim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Any"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wujud Doa"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvWujudDoa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Any"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvJumlahDukungan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 dukungan doa"
+            android:layout_gravity="end"/>
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnTambahDukunganDoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DUKUNG DOA"
+            android:backgroundTint="@color/black"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

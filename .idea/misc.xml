@@ -6,14 +6,19 @@
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.403125" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/drawable/ic_email.xml" value="0.403125" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/drawable/round_border.xml" value="0.403125" />
+        <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/drawable/round_border2.xml" value="0.403125" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/drawable/round_conner.xml" value="0.403125" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/drawable/round_top_corner.xml" value="0.403125" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/activity_main.xml" value="0.38697916666666665" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/activity_user.xml" value="0.25" />
+        <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/card_wujud_doa.xml" value="0.33" />
+        <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/fragment_dukungan_doa.xml" value="0.22" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/fragment_home_page.xml" value="0.38697916666666665" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/fragment_login_or_register_page.xml" value="0.38697916666666665" />
+        <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/fragment_post_doa.xml" value="0.38697916666666665" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/fragment_profile_page.xml" value="0.38697916666666665" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/fragment_register_page.xml" value="0.38697916666666665" />
+        <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/layout/fragment_renungan_harian.xml" value="0.38697916666666665" />
         <entry key="..\:/Richson/UK PETRA/SEMESTER 5/ANDROID/Android Studio/proyekAndroid/app/src/main/res/menu/bottom_nav.xml" value="0.38697916666666665" />
       </map>
     </option>

@@ -1,16 +1,15 @@
 package com.example.proyekandroid
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,14 +18,13 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [profilePage.newInstance] factory method to
+ * Use the [renunganHarian.newInstance] factory method to
  * create an instance of this fragment.
  */
-class profilePage : Fragment() {
+class renunganHarian : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
     val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,38 +40,30 @@ class profilePage : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_page, container, false)
+        return inflater.inflate(R.layout.fragment_renungan_harian, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val _tvProfileName = view.findViewById<TextView>(R.id.tvProfileName)
-        val _tvProfileEmail = view.findViewById<TextView>(R.id.tvProfileEmail)
-        val _tvProfilePassword = view.findViewById<TextView>(R.id.tvProfileHP)
-        val _signout = view.findViewById<ImageView>(R.id.logoutButton)
 
-        val currentUser = Firebase.auth.currentUser
-        val currenUID = Firebase.auth.uid
-        val reference = db.collection("Users")
+        val _tvJudulRenungan = view.findViewById<TextView>(R.id.tvJudulRenungan)
+        val _tvIsiRenungan = view.findViewById<TextView>(R.id.tvIsiRenungan)
+        val _tvTanggal = view.findViewById<TextView>(R.id.tvTanggal)
+        val reference = db.collection("Renungan")
 
-        reference.whereEqualTo("uid", currenUID).get()
-            .addOnCompleteListener{
-            if(it.isSuccessful){
+        val sdf = SimpleDateFormat("dd/M/yyyy")
+        val currentDate = sdf.format(Date())
+        _tvTanggal.text = currentDate
+
+        //System.out.println(" C DATE is  "+ currentDate)
+        reference.whereEqualTo("tanggal", currentDate).get()
+            .addOnCompleteListener {
                 for (document in it.result!!){
-                    _tvProfileName.text = document.data.getValue("firstname").toString() + " " + document.data.getValue("lastname").toString()
-                    _tvProfileEmail.text = document.data.getValue("email").toString()
+                    _tvJudulRenungan.text = document.data.getValue("judul").toString()
+                    _tvIsiRenungan.text = document.data.getValue("isi").toString()
                 }
             }
-        }
 
-        _signout.setOnClickListener{
-            Firebase.auth.signOut()
-            goToMain()
-        }
-    }
-    fun goToMain() {
-        val intent = Intent(activity, MainActivity::class.java)
-        startActivity(intent)
     }
 
     companion object {
@@ -83,12 +73,12 @@ class profilePage : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment profilePage.
+         * @return A new instance of fragment renunganHarian.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            profilePage().apply {
+            renunganHarian().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

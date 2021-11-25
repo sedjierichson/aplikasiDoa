@@ -9,8 +9,15 @@
         android:title="Alkitab"
         android:icon="@drawable/alkitab"/>
 
-    <item android:title="Renungan"
+    <item
+        android:id="@+id/renunganHarian"
+        android:title="Renungan"
         android:icon="@drawable/renungan"/>
+
+    <item
+        android:id="@+id/dukunganDoa"
+        android:title="Doa"
+        android:icon="@drawable/pray"/>
 
     <item android:id="@+id/profilePage"
         android:title="Profile"

@@ -15,4 +15,23 @@
         android:name="com.example.proyekandroid.profilePage"
         android:label="fragment_profile_page"
         tools:layout="@layout/fragment_profile_page" />
+    <fragment
+        android:id="@+id/dukunganDoa"
+        android:name="com.example.proyekandroid.dukunganDoa"
+        android:label="fragment_dukungan_doa"
+        tools:layout="@layout/fragment_dukungan_doa" >
+        <action
+            android:id="@+id/action_dukunganDoa_to_postDoa"
+            app:destination="@id/postDoa" />
+    </fragment>
+    <fragment
+        android:id="@+id/postDoa"
+        android:name="com.example.proyekandroid.postDoa"
+        android:label="fragment_post_doa"
+        tools:layout="@layout/fragment_post_doa" />
+    <fragment
+        android:id="@+id/renunganHarian"
+        android:name="com.example.proyekandroid.renunganHarian"
+        android:label="fragment_renungan_harian"
+        tools:layout="@layout/fragment_renungan_harian" />
 </navigation>

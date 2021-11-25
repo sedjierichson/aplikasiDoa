@@ -115,6 +115,7 @@ class RegisterPage : Fragment() {
 
 
     class User(val uid: String, val firstname: String, val lastname : String, val email: String)
+
     fun goToAttract() {
         val intent = Intent(activity, user_Activity::class.java)
         startActivity(intent)
