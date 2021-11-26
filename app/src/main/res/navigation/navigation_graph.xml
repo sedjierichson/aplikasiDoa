@@ -14,7 +14,11 @@
         android:id="@+id/profilePage"
         android:name="com.example.proyekandroid.profilePage"
         android:label="fragment_profile_page"
-        tools:layout="@layout/fragment_profile_page" />
+        tools:layout="@layout/fragment_profile_page" >
+        <action
+            android:id="@+id/action_profilePage_to_editProfile"
+            app:destination="@id/editProfile" />
+    </fragment>
     <fragment
         android:id="@+id/dukunganDoa"
         android:name="com.example.proyekandroid.dukunganDoa"
@@ -34,4 +38,9 @@
         android:name="com.example.proyekandroid.renunganHarian"
         android:label="fragment_renungan_harian"
         tools:layout="@layout/fragment_renungan_harian" />
+    <fragment
+        android:id="@+id/editProfile"
+        android:name="com.example.proyekandroid.editProfile"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
 </navigation>

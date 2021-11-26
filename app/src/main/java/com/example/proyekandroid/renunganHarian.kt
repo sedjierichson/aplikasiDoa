@@ -117,6 +117,7 @@ class renunganHarian : Fragment(), DatePickerDialog.OnDateSetListener, TimePicke
 
         _pickDate.setOnClickListener{
             DatePickerDialog(requireActivity(), this, year, month, day).show()
+            DatePickerDialog.BUTTON_POSITIVE
             //println(year +  month + day)
             //println("Dari tombol" + currentDate)
 

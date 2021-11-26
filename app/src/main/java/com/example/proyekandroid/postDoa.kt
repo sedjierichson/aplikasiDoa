@@ -78,7 +78,7 @@ class postDoa : Fragment() {
                     val _uid = FirebaseAuth.getInstance().uid?:""
                     val messageID = referenceWujudDoa.document().id
                     val _jumlahDukungan = 0
-                    val wujudDoa = wujudDoa(_uid, displayName , _editTextWujudDoa.text.toString(), currentDateTime.toString(), messageID, _jumlahDukungan)
+                    val wujudDoa = wujudDoa(_uid, displayName , _editTextWujudDoa.text.toString(), currentDateTime.toString(), messageID, _jumlahDukungan.toString())
 
                     println("ID BARU WUJUD DOA " + messageID)
 
@@ -98,7 +98,7 @@ class postDoa : Fragment() {
         }
 
     }
-    class wujudDoa (val uid: String, val sender: String, val doa: String, val time: String, val msgId: String, val jumlahDukungan: Int)
+    class wujudDoa (val uid: String, val sender: String, val doa: String, val time: String, val msgId: String, val jumlahDukungan: String)
 
     companion object {
         /**
