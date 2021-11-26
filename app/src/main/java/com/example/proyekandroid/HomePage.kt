@@ -54,7 +54,7 @@ class HomePage : Fragment() {
         reference.whereEqualTo("uid", currenUID).get().addOnCompleteListener{
             if(it.isSuccessful){
                 for (document in it.result!!){
-                    _tvWelcome.text = "Welcome " + document.data.getValue("firstname").toString()
+                    _tvWelcome.text = "Hello " + document.data.getValue("firstname").toString()
                 }
             }
         }
